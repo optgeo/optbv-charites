@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     hash: true, 
     center: [135, 35],
     zoom: 4,
-    maxZoom: 22
+    maxZoom: 22,
+    localIdeographFontFamily: ['sans-serif']
   })
   map.addControl(new maplibregl.NavigationControl())
   map.addControl(new maplibregl.ScaleControl({

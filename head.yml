@@ -14,5 +14,4 @@ sources:
 layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/contour.yml
-  - !!inc/file layers/contour-numeric.yml
   - !!inc/file layers/landform-line.yml

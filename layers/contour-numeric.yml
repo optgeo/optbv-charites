@@ -18,6 +18,8 @@ layout:
   text-field:
     - get
     - vt_alti
+  text-font:
+    - sans-serif
 paint:
   text-color: rgba(200, 160, 60,1)
   text-halo-color: rgba(255,255,255,1)
