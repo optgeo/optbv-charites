@@ -1,14 +1,16 @@
 {
-  "version": "1.0.0",
+  "tilejson": "3.0.0",
   "name": "optbv",
   "description": "Optimal Vector Tiles 1.0 from Geospatial Information Authority of Japan",
+  "version": "1.0.0",
   "attribution": "Geospatial Information Authority of Japan",
   "scheme": "xyz",
   "tiles": [
     "https://maps.gsi.go.jp/xyz/experimental_bvmap-v1/{z}/{x}/{y}.pbf"
   ],
   "minzoom": 4,
-  "maxzoom": 16,
+  "fillzoom": 16,
+  "maxzoom": 22,
   "bounds": [
     -180,
     -85,
