@@ -19,3 +19,10 @@ charites build head.yml docs/head.json
   EOS
 end
 
+task :tilejson do
+  sh <<-EOS
+cat tile.yml | \
+ruby -rjson -ryaml -e 'print YAML.load(STDIN.read).to_json' | \
+jq . > docs/tile.json
+  EOS
+end
