@@ -23,28 +23,6 @@
       "paint": {
         "line-color": "rgb(200,160,60)"
       }
-    },
-    {
-      "id": "landform-line",
-      "type": "line",
-      "source": "v",
-      "source-layer": "TpgphLine",
-      "paint": {
-        "line-color": [
-          "match",
-          [
-            "get",
-            "vt_code"
-          ],
-          [
-            7571,
-            7572
-          ],
-          "rgba(20,90,255,1)",
-          "rgb(200,160,60)"
-        ],
-        "line-width": 1
-      }
     }
   ]
 }

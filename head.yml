@@ -13,4 +13,3 @@ sources:
     attribution: optbv(head), vector tiles by GSI
 layers:
   - !!inc/file layers/contour.yml
-  - !!inc/file layers/landform-line.yml
