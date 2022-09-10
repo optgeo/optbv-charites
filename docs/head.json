@@ -33,110 +33,30 @@
       }
     },
     {
-      "id": "等高線",
+      "id": "contour",
       "type": "line",
       "source": "v",
       "source-layer": "Cntr",
       "paint": {
         "line-color": "rgb(200,160,60)",
         "line-width": [
-          "interpolate",
+          "match",
           [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          9,
-          0.7,
-          12,
-          0.7,
-          13,
-          [
-            "case",
+            "%",
             [
-              "==",
-              [
-                "%",
-                [
-                  "get",
-                  "vt_alti"
-                ],
-                50
-              ],
-              0
+              "get",
+              "vt_alti"
             ],
-            1.4,
-            0.7
-          ]
-        ],
-        "line-opacity": [
-          "interpolate",
-          [
-            "linear"
+            50
           ],
-          [
-            "zoom"
-          ],
-          9,
           0,
-          10,
-          [
-            "case",
-            [
-              "==",
-              [
-                "%",
-                [
-                  "get",
-                  "vt_alti"
-                ],
-                50
-              ],
-              0
-            ],
-            1,
-            0
-          ],
-          14,
-          [
-            "case",
-            [
-              "==",
-              [
-                "%",
-                [
-                  "get",
-                  "vt_alti"
-                ],
-                50
-              ],
-              0
-            ],
-            1,
-            0
-          ],
-          15,
-          1,
-          16,
-          [
-            "case",
-            [
-              "==",
-              [
-                "get",
-                "vt_code"
-              ],
-              7353
-            ],
-            0,
-            1
-          ]
+          1.4,
+          0.7
         ]
       }
     },
     {
-      "id": "等高線数値部",
+      "id": "contour-numeric",
       "type": "symbol",
       "source": "v",
       "source-layer": "Cntr",
@@ -155,9 +75,6 @@
         "text-pitch-alignment": "viewport",
         "text-rotation-alignment": "map",
         "text-size": 13,
-        "text-font": [
-          "NotoSansJP-Regular"
-        ],
         "text-max-angle": 360,
         "text-field": [
           "get",
@@ -171,7 +88,7 @@
       }
     },
     {
-      "id": "地形表記線",
+      "id": "landform-line",
       "type": "line",
       "source": "v",
       "source-layer": "TpgphLine",
@@ -189,34 +106,7 @@
           "rgba(20,90,255,1)",
           "rgb(200,160,60)"
         ],
-        "line-width": 1,
-        "line-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          14,
-          0,
-          15,
-          [
-            "case",
-            [
-              "==",
-              [
-                "get",
-                "vt_code"
-              ],
-              7509
-            ],
-            0,
-            1
-          ],
-          16,
-          1
-        ]
+        "line-width": 1
       }
     }
   ]

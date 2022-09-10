@@ -1,4 +1,4 @@
-id: 等高線数値部
+id: contour-numeric
 type: symbol
 source: v
 source-layer: Cntr
@@ -14,8 +14,6 @@ layout:
   text-pitch-alignment: viewport
   text-rotation-alignment: map
   text-size: 13
-  text-font:
-    - NotoSansJP-Regular
   text-max-angle: 360
   text-field:
     - get
