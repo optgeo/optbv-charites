@@ -12,6 +12,5 @@ sources:
         https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap-v1/{z}/{x}/{y}.pbf
     attribution: optbv(head), vector tiles by GSI
 layers:
-  - !!inc/file layers/background.yml
   - !!inc/file layers/contour.yml
   - !!inc/file layers/landform-line.yml

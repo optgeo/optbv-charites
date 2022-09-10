@@ -4,12 +4,3 @@ source: v
 source-layer: Cntr
 paint:
   line-color: rgb(200,160,60)
-  line-width:
-    - match
-    - - '%'
-      - - get
-        - vt_alti
-      - 50
-    - 0
-    - 1.4
-    - 0.7

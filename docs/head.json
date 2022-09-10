@@ -16,43 +16,12 @@
   },
   "layers": [
     {
-      "id": "background",
-      "type": "background",
-      "paint": {
-        "background-color": [
-          "step",
-          [
-            "zoom"
-          ],
-          "rgba(255,255,255,1)",
-          4,
-          "rgba(190,210,255,1)",
-          8,
-          "rgba(255,255,255,1)"
-        ]
-      }
-    },
-    {
       "id": "contour",
       "type": "line",
       "source": "v",
       "source-layer": "Cntr",
       "paint": {
-        "line-color": "rgb(200,160,60)",
-        "line-width": [
-          "match",
-          [
-            "%",
-            [
-              "get",
-              "vt_alti"
-            ],
-            50
-          ],
-          0,
-          1.4,
-          0.7
-        ]
+        "line-color": "rgb(200,160,60)"
       }
     },
     {
