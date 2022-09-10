@@ -1,0 +1,18 @@
+version: 8
+name: gsimapvector
+glyphs: https://gsi-cyberjapan.github.io/optimal_bvmap/glyphs/{fontstack}/{range}.pbf
+sprite: https://gsi-cyberjapan.github.io/optimal_bvmap/sprite/std
+sources:
+  v:
+    type: vector
+    minzoom: 0
+    maxzoom: 16
+    tiles:
+      - >-
+        https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap-v1/{z}/{x}/{y}.pbf
+    attribution: optbv(head), vector tiles by GSI
+layers:
+  - !!inc/file layers/background.yml
+  - !!inc/file layers/contour.yml
+  - !!inc/file layers/contour-numeric.yml
+  - !!inc/file layers/landform-line.yml

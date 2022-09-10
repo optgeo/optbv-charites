@@ -1,0 +1,223 @@
+{
+  "version": 8,
+  "name": "gsimapvector",
+  "glyphs": "https://gsi-cyberjapan.github.io/optimal_bvmap/glyphs/{fontstack}/{range}.pbf",
+  "sprite": "https://gsi-cyberjapan.github.io/optimal_bvmap/sprite/std",
+  "sources": {
+    "v": {
+      "type": "vector",
+      "minzoom": 0,
+      "maxzoom": 16,
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap-v1/{z}/{x}/{y}.pbf"
+      ],
+      "attribution": "optbv(head), vector tiles by GSI"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": [
+          "step",
+          [
+            "zoom"
+          ],
+          "rgba(255,255,255,1)",
+          4,
+          "rgba(190,210,255,1)",
+          8,
+          "rgba(255,255,255,1)"
+        ]
+      }
+    },
+    {
+      "id": "等高線",
+      "type": "line",
+      "source": "v",
+      "source-layer": "Cntr",
+      "paint": {
+        "line-color": "rgb(200,160,60)",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0.7,
+          12,
+          0.7,
+          13,
+          [
+            "case",
+            [
+              "==",
+              [
+                "%",
+                [
+                  "get",
+                  "vt_alti"
+                ],
+                50
+              ],
+              0
+            ],
+            1.4,
+            0.7
+          ]
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          9,
+          0,
+          10,
+          [
+            "case",
+            [
+              "==",
+              [
+                "%",
+                [
+                  "get",
+                  "vt_alti"
+                ],
+                50
+              ],
+              0
+            ],
+            1,
+            0
+          ],
+          14,
+          [
+            "case",
+            [
+              "==",
+              [
+                "%",
+                [
+                  "get",
+                  "vt_alti"
+                ],
+                50
+              ],
+              0
+            ],
+            1,
+            0
+          ],
+          15,
+          1,
+          16,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "vt_code"
+              ],
+              7353
+            ],
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "等高線数値部",
+      "type": "symbol",
+      "source": "v",
+      "source-layer": "Cntr",
+      "filter": [
+        "==",
+        [
+          "get",
+          "vt_code"
+        ],
+        7352
+      ],
+      "layout": {
+        "text-allow-overlap": true,
+        "text-ignore-placement": true,
+        "symbol-placement": "line-center",
+        "text-pitch-alignment": "viewport",
+        "text-rotation-alignment": "map",
+        "text-size": 13,
+        "text-font": [
+          "NotoSansJP-Regular"
+        ],
+        "text-max-angle": 360,
+        "text-field": [
+          "get",
+          "vt_alti"
+        ]
+      },
+      "paint": {
+        "text-color": "rgba(200, 160, 60,1)",
+        "text-halo-color": "rgba(255,255,255,1)",
+        "text-halo-width": 1.5
+      }
+    },
+    {
+      "id": "地形表記線",
+      "type": "line",
+      "source": "v",
+      "source-layer": "TpgphLine",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "vt_code"
+          ],
+          [
+            7571,
+            7572
+          ],
+          "rgba(20,90,255,1)",
+          "rgb(200,160,60)"
+        ],
+        "line-width": 1,
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          15,
+          [
+            "case",
+            [
+              "==",
+              [
+                "get",
+                "vt_code"
+              ],
+              7509
+            ],
+            0,
+            1
+          ],
+          16,
+          1
+        ]
+      }
+    }
+  ]
+}

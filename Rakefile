@@ -12,3 +12,10 @@ curl -L -o docs/maplibre-gl.css \
 https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css
   EOS
 end
+
+task :head do
+  sh <<-EOS
+charites build head.yml docs/head.json
+  EOS
+end
+
