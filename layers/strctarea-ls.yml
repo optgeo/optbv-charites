@@ -1,0 +1,10 @@
+id: strctarea-ls
+type: line
+source: v
+source-layer: StrctArea
+paint:
+  line-color: rgba(255,135,75,1)
+  line-width: 1
+  line-dasharray:
+    - 2
+    - 1

@@ -1,4 +1,4 @@
-id: 注記角度付き線
+id: anno
 type: symbol
 source: v
 source-layer: Anno
@@ -8,61 +8,150 @@ filter:
   - - all
     - - '=='
       - - geometry-type
-      - LineString
-    - - '!'
-      - - in
+      - Point
+    - - in
+      - - get
+        - vt_code
+      - - literal
+        - - 313
+          - 353
+          - 361
+          - 413
+          - 423
+          - 522
+          - 523
+          - 533
+          - 534
+          - 611
+          - 612
+          - 613
+          - 615
+          - 671
+          - 673
+          - 681
+          - 720
+          - 860
+          - 870
+          - 882
+          - 883
+          - 884
+          - 886
+          - 887
+          - 888
+          - 890
+          - 899
+          - 7104
+    - - any
+      - - '=='
         - - get
-          - vt_code
-        - - literal
-          - - 2901
-            - 2903
-            - 2904
-            - 7701
+          - vt_arrng
+        - 1
+      - - '!'
+        - - has
+          - vt_arrng
   - 16
   - - all
     - - '=='
       - - geometry-type
-      - LineString
+      - Point
     - - in
       - - get
         - vt_flag17
       - - literal
         - - 0
           - 1
-    - - '!'
-      - - in
+    - - in
+      - - get
+        - vt_code
+      - - literal
+        - - 313
+          - 353
+          - 361
+          - 413
+          - 423
+          - 522
+          - 523
+          - 533
+          - 534
+          - 611
+          - 612
+          - 613
+          - 615
+          - 671
+          - 673
+          - 681
+          - 720
+          - 860
+          - 870
+          - 882
+          - 883
+          - 884
+          - 886
+          - 887
+          - 888
+          - 890
+          - 899
+          - 7104
+    - - any
+      - - '=='
         - - get
-          - vt_code
-        - - literal
-          - - 2901
-            - 2903
-            - 2904
-            - 7701
+          - vt_arrng
+        - 1
+      - - '!'
+        - - has
+          - vt_arrng
   - 17
   - - all
     - - '=='
       - - geometry-type
-      - LineString
+      - Point
     - - in
       - - get
         - vt_flag17
       - - literal
         - - 1
           - 2
-    - - '!'
-      - - in
+    - - in
+      - - get
+        - vt_code
+      - - literal
+        - - 313
+          - 353
+          - 361
+          - 413
+          - 423
+          - 522
+          - 523
+          - 533
+          - 534
+          - 611
+          - 612
+          - 613
+          - 615
+          - 671
+          - 673
+          - 681
+          - 720
+          - 860
+          - 870
+          - 882
+          - 883
+          - 884
+          - 886
+          - 887
+          - 888
+          - 890
+          - 899
+          - 7104
+    - - any
+      - - '=='
         - - get
-          - vt_code
-        - - literal
-          - - 2901
-            - 2903
-            - 2904
-            - 7701
+          - vt_arrng
+        - 1
+      - - '!'
+        - - has
+          - vt_arrng
 layout:
-  icon-allow-overlap: false
-  symbol-placement: line-center
-  text-pitch-alignment: viewport
-  text-rotation-alignment: map
   symbol-sort-key:
     - match
     - - get
@@ -520,6 +609,120 @@ layout:
     - 156
     - 0
   text-allow-overlap: false
+  text-anchor:
+    - match
+    - - get
+      - vt_code
+    - - 431
+      - 532
+      - 533
+      - 720
+    - top-left
+    - - 2941
+      - 2942
+      - 2943
+      - 2944
+      - 2945
+    - left
+    - - case
+      - - '=='
+        - - get
+          - arrng
+        - 2
+      - - case
+        - - '=='
+          - - get
+            - vt_dsppos
+          - LT
+        - top-right
+        - - '=='
+          - - get
+            - vt_dsppos
+          - CT
+        - right
+        - - '=='
+          - - get
+            - vt_dsppos
+          - RT
+        - bottom-right
+        - - '=='
+          - - get
+            - vt_dsppos
+          - LC
+        - top
+        - - '=='
+          - - get
+            - vt_dsppos
+          - CC
+        - center
+        - - '=='
+          - - get
+            - vt_dsppos
+          - RC
+        - bottom
+        - - '=='
+          - - get
+            - vt_dsppos
+          - LB
+        - top-left
+        - - '=='
+          - - get
+            - vt_dsppos
+          - CB
+        - left
+        - - '=='
+          - - get
+            - vt_dsppos
+          - RB
+        - bottom-left
+        - center
+      - - case
+        - - '=='
+          - - get
+            - vt_dsppos
+          - LT
+        - top-left
+        - - '=='
+          - - get
+            - vt_dsppos
+          - CT
+        - top
+        - - '=='
+          - - get
+            - vt_dsppos
+          - RT
+        - top-right
+        - - '=='
+          - - get
+            - vt_dsppos
+          - LC
+        - left
+        - - '=='
+          - - get
+            - vt_dsppos
+          - CC
+        - center
+        - - '=='
+          - - get
+            - vt_dsppos
+          - RC
+        - right
+        - - '=='
+          - - get
+            - vt_dsppos
+          - LB
+        - bottom-left
+        - - '=='
+          - - get
+            - vt_dsppos
+          - CB
+        - bottom
+        - - '=='
+          - - get
+            - vt_dsppos
+          - RB
+        - bottom-right
+        - center
   text-font:
     - match
     - - get
@@ -536,9 +739,9 @@ layout:
       - 841
       - 842
     - - literal
-      - - NotoSerifJP-SemiBold
+      - - $bold-font
     - - literal
-      - - NotoSerifJP-Regular
+      - - $regular-font
   text-justify: auto
   text-size:
     - let
@@ -568,7 +771,6 @@ layout:
         - 342
         - 353
         - 412
-        - 521
         - 533
         - 621
         - 631
@@ -608,6 +810,7 @@ layout:
         - 432
         - 441
         - 511
+        - 521
         - 522
         - 523
         - 531
@@ -689,8 +892,7 @@ layout:
           - 1402
           - 1403
         - 20
-        - - 422
-          - 531
+        - 422
         - - '*'
           - 0.7
           - - var
@@ -719,12 +921,8 @@ layout:
     - get
     - vt_text
   text-max-width: 100
-  text-radial-offset: 0.5
-  text-variable-anchor:
-    - center
   text-writing-mode:
     - horizontal
-    - vertical
 paint:
   text-color:
     - match
@@ -843,5 +1041,5 @@ paint:
       - 3244
     - rgba(50,50,50,1)
     - rgba(0,0,0,1)
-  text-halo-color: rgba(255,255,255,1)
-  text-halo-width: 1
+  text-halo-color: $text-halo-color
+  text-halo-width: $text-halo-width

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="maplibre-gl.css"/>
+<script src="maplibre-gl.js"></script>
+</head>
+<body>
+<style>
+body { margin:0; padding:0; font-family: 'Roboto', sans-serif; color: #333333}
+#map { top:0; height: 100vh; width: 100vw; position: fixed; z-index: 0; }
+</style>
+<div id="map"></div>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const map = new maplibregl.Map({
+    container: "map",
+    style: "maplibre-intl.json",
+    hash: true, 
+    center: [135, 35],
+    zoom: 4,
+    maxZoom: 22
+  })
+  map.addControl(new maplibregl.NavigationControl())
+  map.addControl(new maplibregl.ScaleControl({
+    maxWidth: 200, unit: "metric"
+  }))
+})
+</script>
+</body>
+

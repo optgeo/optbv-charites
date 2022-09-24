@@ -1,4 +1,4 @@
-id: 注記角度付き線
+id: anno-ls
 type: symbol
 source: v
 source-layer: Anno
@@ -536,9 +536,9 @@ layout:
       - 841
       - 842
     - - literal
-      - - NotoSerifJP-SemiBold
+      - - $bold-font
     - - literal
-      - - NotoSerifJP-Regular
+      - - $regular-font
   text-justify: auto
   text-size:
     - let

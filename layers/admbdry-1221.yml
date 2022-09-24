@@ -1,0 +1,15 @@
+id: admbdry-1221
+maxzoom: 8
+type: line
+source: v
+source-layer: AdmBdry
+filter:
+  - '=='
+  - - get
+    - vt_code
+  - 1221
+layout:
+  line-cap: square
+paint:
+  line-color: rgba(34,24,21,1)
+  line-width: 1

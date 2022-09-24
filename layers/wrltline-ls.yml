@@ -1,0 +1,11 @@
+id: wrltline-ls
+type: line
+source: v
+source-layer: WRltLine
+filter:
+  - '=='
+  - - geometry-type
+  - LineString
+paint:
+  line-color: rgba(231,39,65,1)
+  line-width: 1

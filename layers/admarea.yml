@@ -1,0 +1,6 @@
+id: admarea
+type: fill
+source: v
+source-layer: AdmArea
+paint:
+  fill-color: $background-color
